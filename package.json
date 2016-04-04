@@ -1,12 +1,17 @@
 {
   "name": "userapi",
+  "main": "app.js",
   "version": "1.0.0",
   "description": "Simple user  app using Node.js, Express and MySQL",
   "author": "Arjun C Mohan",
   "license": "MIT",
+   "scripts": {
+    "start": "node app.js"
+   },
   "dependencies": {
     "body-parser": "^1.14.1",
     "express": "^4.13.3",
-    "mysql": "^2.9.0"
+    "mysql": "5.05"
   }
 }
+
