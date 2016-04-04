@@ -1,21 +1,21 @@
-var todo = require('./models/todo');
+var usermodel = require('./models/usermodel');
 
 module.exports = {
   configure: function(app) {
-    app.get('/todo/', function(req, res) {
-      todo.get(res);
+    app.get('/api/', function(req, res) {
+    	usermodel.get(res);
     });
 
-    app.post('/todo/', function(req, res) {
-      todo.create(req.body, res);
+    app.post('/api/', function(req, res) {
+    	usermodel.create(req.body, res);
     });
 
-    app.put('/todo/', function(req, res) {
-      todo.update(req.body, res);
+    app.put('/api/', function(req, res) {
+    	usermodel.update(req.body, res);
     });
 
-    app.delete('/todo/:id/', function(req, res) {
-      todo.delete(req.params.id, res);
+    app.delete('/api/:id/', function(req, res) {
+    	usermodel.delete(req.params.id, res);
     });
   }
 };
